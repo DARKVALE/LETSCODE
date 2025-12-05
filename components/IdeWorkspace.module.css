@@ -1,0 +1,170 @@
+.layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.sidebar {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+  height: 100%;
+}
+
+.sidebarHeader strong {
+  display: block;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.files {
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.file {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+}
+
+.status {
+  color: var(--text);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.timeline {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.activityList {
+  display: grid;
+  gap: 10px;
+}
+
+.activity {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.activityStatus {
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.activityStatus[data-state='active'] {
+  color: var(--warning);
+}
+
+.activityStatus[data-state='done'] {
+  color: var(--success);
+}
+
+.main {
+  display: grid;
+  gap: 12px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toolbarActions {
+  display: flex;
+  gap: 8px;
+}
+
+.editorShell {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #0f1729 0%, #0b1221 100%);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 520px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.editorHeader {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.tab {
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--muted);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.tab[data-active] {
+  border-color: var(--border);
+  background: rgba(124, 58, 237, 0.08);
+  color: var(--text);
+}
+
+.codePane {
+  padding: 16px;
+  font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.codePane pre {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.logPane {
+  border-top: 1px solid var(--border);
+  padding: 12px 16px 18px;
+  background: #0b1221;
+}
+
+.logHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.logs {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

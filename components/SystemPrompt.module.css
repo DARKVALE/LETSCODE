@@ -1,0 +1,22 @@
+.content {
+  display: grid;
+  gap: 12px;
+}
+
+.prompt {
+  width: 100%;
+  min-height: 160px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  padding: 12px;
+  font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+  resize: vertical;
+}
+
+.next ul {
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
